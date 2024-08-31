@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - PlayerList</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 50 Jugadores de Geometry Dash - Demonlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .player-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .player {
+            background-color: #34495e;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .player h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .player p {
+            margin: 5px 0;
+        }
+        .player a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+        .player a:hover {
+            text-decoration: underline;
+        }
+        .language-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-buttons button {
+            background-color: #1abc9c;
+            color: #ecf0f1;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-buttons button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-buttons">
+        <button onclick="changeLanguage('es')">Español</button>
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('zh')">中文</button>
+        <button onclick="changeLanguage('ru')">Русский</button>
+    </div>
+
+    <h1 id="title">Top 50 Jugadores de Geometry Dash - Demonlist</h1>
+    <div class="player-list" id="playerList">
+        <div class="player">
+            <h2 id="player1">#1 Trick - 23433.33 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player2">#2 Zoink - 21718.95 (Estados Unidos)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player3">#3 wPopoff - 15202.36 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player4">#4 Thnnder - 13850.2 (Brasil)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player5">#5 Doggie - 10025.33 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player6">#6 Netermind - 9671.56 (Alemania)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player7">#7 Taiago - 9292.48 (México)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player8">#8 ViperVenom95 - 9258 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player9">#9 Laniakea - 8916.48 (Estados Unidos)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player10">#10 SnowBallerr - 8272.97 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player11">#11 loliklee - 8124.09 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player12">#12 Cursed - 8003.37 (España)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player13">#13 Hipo - 7840.91 (Chile)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player14">#14 Whizkid05 - 7589.89 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player15">#15 Hover - 7393.86 (Italia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player16">#16 Quivert - 7049.48 (Suecia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player17">#17 cobrablitz - 6697.82 (Brasil)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player18">#18 Amza - 6691.39 (Rumania)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player19">#19 teraaa - 6484.29 (Alemania)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player20">#20 skzyl - 6453.94 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player21">#21 Nickname - 6129.02 (Polonia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player22">#22 SerVax - 5975.43 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player23">#23 Bigthunder556 - 5860.03 (Alemania)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player24">#24 Mizukii - 5588.51 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player25">#25 eastshark - 5580.31 (España)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player26">#26 Light - 5462.1 (Italia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player27">#27 kloone - 5409.78 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player28">#28 Tunax - 5380.5 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player29">#29 PersonHuman42 - 5348.97 (Estados Unidos)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player30">#30 Cookie - 5213.72 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player31">#31 Arshadow - 5150.25 (Brasil)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player32">#32 Superjavicon - 4978.77 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player33">#33 Seturan - 4974.12 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player34">#34 takmaster - 4877.6 (Alemania)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player35">#35 Axinity - 4701.69 (Suecia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player36">#36 TheTerrBonnie - 4569.89 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player37">#37 Cryonix6000 - 4510.71 (España)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player38">#38 Zeroxy - 4496.06 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player39">#39 MAXER GD - 4396.02 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player40">#40 DibiiziCookie - 4351.31 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player41">#41 Baeru - 4195.51 (Brasil)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player42">#42 Denni - 4122.79 (Estados Unidos)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player43">#43 exsii - 4096.92 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player44">#44 Emiliano56 - 4082.92 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player45">#45 Zeronium - 4013.35 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player46">#46 zThund3r - 3998.37 (Canadá)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player47">#47 RaeveZ - 3900.69 (Alemania)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player48">#48 PoCle - 3865.06 (Rusia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player49">#49 Breakcore - 3841.46 (Francia)</h2>
+        </div>
+        <div class="player">
+            <h2 id="player50">#50 JesseGamingGD - 3811.84 (Brasil)</h2>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            es: {
+                title: "Top 50 Jugadores de Geometry Dash - Demonlist",
+                players: [
+                    "#1 Trick - 23433.33 (Canadá)",
+                    "#2 Zoink - 21718.95 (Estados Unidos)",
+                    "#3 wPopoff - 15202.36 (Rusia)",
+                    "#4 Thnnder - 13850.2 (Brasil)",
+                    "#5 Doggie - 10025.33 (Francia)",
+                    "#6 Netermind - 9671.56 (Alemania)",
+                    "#7 Taiago - 9292.48 (México)",
+                    "#8 ViperVenom95 - 9258 (Rusia)",
+                    "#9 Laniakea - 8916.48 (Estados Unidos)",
+                    "#10 SnowBallerr - 8272.97 (Canadá)",
+                    "#11 loliklee - 8124.09 (Rusia)",
+                    "#12 Cursed - 8003.37 (España)",
+                    "#13 Hipo - 7840.91 (Chile)",
+                    "#14 Whizkid05 - 7589.89 (Francia)",
+                    "#15 Hover - 7393.86 (Italia)",
+                    "#16 Quivert - 7049.48 (Suecia)",
+                    "#17 cobrablitz - 6697.82 (Brasil)",
+                    "#18 Amza - 6691.39 (Rumania)",
+                    "#19 teraaa - 6484.29 (Alemania)",
+                    "#20 skzyl - 6453.94 (Canadá)",
+                    "#21 Nickname - 6129.02 (Polonia)",
+                    "#22 SerVax - 5975.43 (Francia)",
+                    "#23 Bigthunder556 - 5860.03 (Alemania)",
+                    "#24 Mizukii - 5588.51 (Rusia)",
+                    "#25 eastshark - 5580.31 (España)",
+                    "#26 Light - 5462.1 (Italia)",
+                    "#27 kloone - 5409.78 (Canadá)",
+                    "#28 Tunax - 5380.5 (Rusia)",
+                    "#29 PersonHuman42 - 5348.97 (Estados Unidos)",
+                    "#30 Cookie - 5213.72 (Francia)",
+                    "#31 Arshadow - 5150.25 (Brasil)",
+                    "#32 Superjavicon - 4978.77 (Canadá)",
+                    "#33 Seturan - 4974.12 (Rusia)",
+                    "#34 takmaster - 4877.6 (Alemania)",
+                    "#35 Axinity - 4701.69 (Suecia)",
+                    "#36 TheTerrBonnie - 4569.89 (Rusia)",
+                    "#37 Cryonix6000 - 4510.71 (España)",
+                    "#38 Zeroxy - 4496.06 (Francia)",
+                    "#39 MAXER GD - 4396.02 (Canadá)",
+                    "#40 DibiiziCookie - 4351.31 (Rusia)",
+                    "#41 Baeru - 4195.51 (Brasil)",
+                    "#42 Denni - 4122.79 (Estados Unidos)",
+                    "#43 exsii - 4096.92 (Canadá)",
+                    "#44 Emiliano56 - 4082.92 (Rusia)",
+                    "#45 Zeronium - 4013.35 (Francia)",
+                    "#46 zThund3r - 3998.37 (Canadá)",
+                    "#47 RaeveZ - 3900.69 (Alemania)",
+                    "#48 PoCle - 3865.06 (Rusia)",
+                    "#49 Breakcore - 3841.46 (Francia)",
+                    "#50 JesseGamingGD - 3811.84 (Brasil)"
+                ]
+            },
+            en: {
+                title: "Top 50 Geometry Dash Players - Demonlist",
+                players: [
+                    "#1 Trick - 23433.33 (Canada)",
+                    "#2 Zoink - 21718.95 (United States)",
+                    "#3 wPopoff - 15202.36 (Russia)",
+                    "#4 Thnnder - 13850.2 (Brazil)",
+                    "#5 Doggie - 10025.33 (France)",
+                    "#6 Netermind - 9671.56 (Germany)",
+                    "#7 Taiago - 9292.48 (Mexico)",
+                    "#8 ViperVenom95 - 9258 (Russia)",
+                    "#9 Laniakea - 8916.48 (United States)",
+                    "#10 SnowBallerr - 8272.97 (Canada)",
+                    "#11 loliklee - 8124.09 (Russia)",
+                    "#12 Cursed - 8003.37 (Spain)",
+                    "#13 Hipo - 7840.91 (Chile)",
+                    "#14 Whizkid05 - 7589.89 (France)",
+                    "#15 Hover - 7393.86 (Italy)",
+                    "#16 Quivert - 7049.48 (Sweden)",
+                    "#17 cobrablitz - 6697.82 (Brazil)",
+                    "#18 Amza - 6691.39 (Romania)",
+                    "#19 teraaa - 6484.29 (Germany)",
+                    "#20 skzyl - 6453.94 (Canada)",
+                    "#21 Nickname - 6129.02 (Poland)",
+                    "#22 SerVax - 5975.43 (France)",
+                    "#23 Bigthunder556 - 5860.03 (Germany)",
+                    "#24 Mizukii - 5588.51 (Russia)",
+                    "#25 eastshark - 5580.31 (Spain)",
+                    "#26 Light - 5462.1 (Italy)",
+                    "#27 kloone - 5409.78 (Canada)",
+                    "#28 Tunax - 5380.5 (Russia)",
+                    "#29 PersonHuman42 - 5348.97 (United States)",
+                    "#30 Cookie - 5213.72 (France)",
+                    "#31 Arshadow - 5150.25 (Brazil)",
+                    "#32 Superjavicon - 4978.77 (Canada)",
+                    "#33 Seturan - 4974.12 (Russia)",
+                    "#34 takmaster - 4877.6 (Germany)",
+                    "#35 Axinity - 4701.69 (Sweden)",
+                    "#36 TheTerrBonnie - 4569.89 (Russia)",
+                    "#37 Cryonix6000 - 4510.71 (Spain)",
+                    "#38 Zeroxy - 4496.06 (France)",
+                    "#39 MAXER GD - 4396.02 (Canada)",
+                    "#40 DibiiziCookie - 4351.31 (Russia)",
+                    "#41 Baeru - 4195.51 (Brazil)",
+                    "#42 Denni - 4122.79 (United States)",
+                    "#43 exsii - 4096.92 (Canada)",
+                    "#44 Emiliano56 - 4082.92 (Russia)",
+                    "#45 Zeronium - 4013.35 (France)",
+                    "#46 zThund3r - 3998.37 (Canada)",
+                    "#47 RaeveZ - 3900.69 (Germany)",
+                    "#48 PoCle - 3865.06 (Russia)",
+                    "#49 Breakcore - 3841.46 (France)",
+                    "#50 JesseGamingGD - 3811.84 (Brazil)"
+                ]
+            },
+            zh: {
+                title: "几何冲刺顶级50玩家 - Demonlist",
+                players: [
+                    "#1 Trick - 23433.33 (加拿大)",
+                    "#2 Zoink - 21718.95 (美国)",
+                    "#3 wPopoff - 15202.36 (俄罗斯)",
+                    "#4 Thnnder - 13850.2 (巴西)",
+                    "#5 Doggie - 10025.33 (法国)",
+                    "#6 Netermind - 9671.56 (德国)",
+                    "#7 Taiago - 9292.48 (墨西哥)",
+                    "#8 ViperVenom95 - 9258 (俄罗斯)",
+                    "#9 Laniakea - 8916.48 (美国)",
+                    "#10 SnowBallerr - 8272.97 (加拿大)",
+                    "#11 loliklee - 8124.09 (俄罗斯)",
+                    "#12 Cursed - 8003.37 (西班牙)",
+                    "#13 Hipo - 7840.91 (智利)",
+                    "#14 Whizkid05 - 7589.89 (法国)",
+                    "#15 Hover - 7393.86 (意大利)",
+                    "#16 Quivert - 7049.48 (瑞典)",
+                    "#17 cobrablitz - 6697.82 (巴西)",
+                    "#18 Amza - 6691.39 (罗马尼亚)",
+                    "#19 teraaa - 6484.29 (德国)",
+                    "#20 skzyl - 6453.94 (加拿大)",
+                    "#21 Nickname - 6129.02 (波兰)",
+                    "#22 SerVax - 5975.43 (法国)",
+                    "#23 Bigthunder556 - 5860.03 (德国)",
+                    "#24 Mizukii - 5588.51 (俄罗斯)",
+                    "#25 eastshark - 5580.31 (西班牙)",
+                    "#26 Light - 5462.1 (意大利)",
+                    "#27 kloone - 5409.78 (加拿大)",
+                    "#28 Tunax - 5380.5 (俄罗斯)",
+                    "#29 PersonHuman42 - 5348.97 (美国)",
+                    "#30 Cookie - 5213.72 (法国)",
+                    "#31 Arshadow - 5150.25 (巴西)",
+                    "#32 Superjavicon - 4978.77 (加拿大)",
+                    "#33 Seturan - 4974.12 (俄罗斯)",
+                    "#34 takmaster - 4877.6 (德国)",
+                    "#35 Axinity - 4701.69 (瑞典)",
+                    "#36 TheTerrBonnie - 4569.89 (俄罗斯)",
+                    "#37 Cryonix6000 - 4510.71 (西班牙)",
+                    "#38 Zeroxy - 4496.06 (法国)",
+                    "#39 MAXER GD - 4396.02 (加拿大)",
+                    "#40 DibiiziCookie - 4351.31 (俄罗斯)",
+                    "#41 Baeru - 4195.51 (巴西)",
+                    "#42 Denni - 4122.79 (美国)",
+                    "#43 exsii - 4096.92 (加拿大)",
+                    "#44 Emiliano56 - 4082.92 (俄罗斯)",
+                    "#45 Zeronium - 4013.35 (法国)",
+                    "#46 zThund3r - 3998.37 (加拿大)",
+                    "#47 RaeveZ - 3900.69 (德国)",
+                    "#48 PoCle - 3865.06 (俄罗斯)",
+                    "#49 Breakcore - 3841.46 (法国)",
+                    "#50 JesseGamingGD - 3811.84 (巴西)"
+                ]
+            },
+            ru: {
+                title: "Топ-50 игроков Geometry Dash - Demonlist",
+                players: [
+                    "#1 Trick - 23433.33 (Канада)",
+                    "#2 Zoink - 21718.95 (США)",
+                    "#3 wPopoff - 15202.36 (Россия)",
+                    "#4 Thnnder - 13850.2 (Бразилия)",
+                    "#5 Doggie - 10025.33 (Франция)",
+                    "#6 Netermind - 9671.56 (Германия)",
+                    "#7 Taiago - 9292.48 (Мексика)",
+                    "#8 ViperVenom95 - 9258 (Россия)",
+                    "#9 Laniakea - 8916.48 (США)",
+                    "#10 SnowBallerr - 8272.97 (Канада)",
+                    "#11 loliklee - 8124.09 (Россия)",
+                    "#12 Cursed - 8003.37 (Испания)",
+                    "#13 Hipo - 7840.91 (Чили)",
+                    "#14 Whizkid05 - 7589.89 (Франция)",
+                    "#15 Hover - 7393.86 (Италия)",
+                    "#16 Quivert - 7049.48 (Швеция)",
+                    "#17 cobrablitz - 6697.82 (Бразилия)",
+                    "#18 Amza - 6691.39 (Румыния)",
+                    "#19 teraaa - 6484.29 (Германия)",
+                    "#20 skzyl - 6453.94 (Канада)",
+                    "#21 Nickname - 6129.02 (Польша)",
+                    "#22 SerVax - 5975.43 (Франция)",
+                    "#23 Bigthunder556 - 5860.03 (Германия)",
+                    "#24 Mizukii - 5588.51 (Россия)",
+                    "#25 eastshark - 5580.31 (Испания)",
+                    "#26 Light - 5462.1 (Италия)",
+                    "#27 kloone - 5409.78 (Канада)",
+                    "#28 Tunax - 5380.5 (Россия)",
+                    "#29 PersonHuman42 - 5348.97 (США)",
+                    "#30 Cookie - 5213.72 (Франция)",
+                    "#31 Arshadow - 5150.25 (Бразилия)",
+                    "#32 Superjavicon - 4978.77 (Канада)",
+                    "#33 Seturan - 4974.12 (Россия)",
+                    "#34 takmaster - 4877.6 (Германия)",
+                    "#35 Axinity - 4701.69 (Швеция)",
+                    "#36 TheTerrBonnie - 4569.89 (Россия)",
+                    "#37 Cryonix6000 - 4510.71 (Испания)",
+                    "#38 Zeroxy - 4496.06 (Франция)",
+                    "#39 MAXER GD - 4396.02 (Канада)",
+                    "#40 DibiiziCookie - 4351.31 (Россия)",
+                    "#41 Baeru - 4195.51 (Бразилия)",
+                    "#42 Denni - 4122.79 (США)",
+                    "#43 exsii - 4096.92 (Канада)",
+                    "#44 Emiliano56 - 4082.92 (Россия)",
+                    "#45 Zeronium - 4013.35 (Франция)",
+                    "#46 zThund3r - 3998.37 (Канада)",
+                    "#47 RaeveZ - 3900.69 (Германия)",
+                    "#48 PoCle - 3865.06 (Россия)",
+                    "#49 Breakcore - 3841.46 (Франция)",
+                    "#50 JesseGamingGD - 3811.84 (Бразилия)"
+                ]
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById('title').innerText = translations[lang].title;
+            const players = document.querySelectorAll('.player h2');
+            translations[lang].players.forEach((playerText, index) => {
+                if (players[index]) {
+                    players[index].innerText = playerText;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
